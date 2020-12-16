@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.card{
+    background-color: orange;
+    width: 80%;
+    background-image: linear-gradient(90deg, rgb(207, 7, 141) 0%, rgb(245, 224, 35)100%);;
+    height: 350px;
+    border-radius: 10px;
+    padding: 3rem;
+    position: relative;
+    transition: all 1s;
+    display: flex;
+    
+
+}
+
+.card:hover {
+    height: 450px;
+}
+
+
+.card:hover .content{
+    opacity: 1;
+    
+}
+
+.card:hover .avatar{
+    height: 250px;
+}
+
+
+.card .avatar {
+    height: 200px;
+} 
+
+
+.card h2 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.card .content{
+    color: white;
+    opacity: 0;
+    transition: all 3s;
+    width: 60%;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.card a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.card .avatar{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 3s;
+}
+
+@media screen and (min-width: 568px) {
+    .card{
+        align-items: center;
+    }
+    .card:hover .avatar{
+        left: 80%;
+        height: 300px;
+    }
+    .card:hover{
+        height: 350px;
+    }
+    .card .content{
+        width: 60%
+    };
+
+}
